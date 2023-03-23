@@ -109,4 +109,4 @@ price2.append(price[ele])
 check = {}
 for num in li:
 if num in check:
-check[num] += 1#hi
+check[num] += 1
