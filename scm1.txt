@@ -1,0 +1,122 @@
+nd dew modules like smtplib, etc. We also
+learnt how to store the informations on a
+small scale and how to easily send emails
+directly from the code console . There were
+many errors during programming of Geeky
+Mart but it was really fun and we will
+upgrade our project with many new features
+soon.RECOMMENDATION
+PAYMENT GATEWAY
+Payment gateway can be
+added in geeky mart project
+to make it more functional
+and to use it as real word
+program.
+More Accessible
+GUI
+A professional GUI can be
+made for GEEKY MART
+program to make it more
+user-friendly and more
+expressive.
+ALIGNMENT
+Table alignments can be
+properly done from other
+modules like MIME to send
+professional mails.
+GEEKY MART program
+can be made more
+accessible with adding
+more inventories and
+adding option to travel
+across inventories easily
+for customer's
+convenience.
+Code Efficiency
+The existing code of
+GEEKY MART program
+can be made more
+efficient to decrease
+runtime of the program
+and make it more
+reliable.
+APPENDIX
+import smtplib
+import pyfiglet
+from prettytable import PrettyTable
+word = pyfiglet.figlet_format("*-*-*-*-*-* \n GEEKY MART \n *-*-*-*-*-*")
+print(word)
+name = input("Enter Your Name - ")
+a = name.split()
+print(f"Welcome! {a[0]} to GEEKY MART")
+print()
+def geekymart():
+column = ["S.No.", "Categories"]
+sno = [0, 1, 2, 3, 4]
+cat = [
+"Munchies", "Dairy", "Cold_Drinks", "Vegetables & Fruits",
+"Bakery & Biscuits"
+]mytable = PrettyTable()
+mytable.add_column(column[0], sno)
+mytable.add_column(column[1], cat)
+print(mytable)
+n = int(input("Enter the no. of the Category - "))
+if n == 0:
+mytable1 = PrettyTable()
+mun_col = ["S.No.", "Name", "Price"]
+sno1 = [0, 1, 2, 3, 4]
+name = ["Lay's", "Kurkure", "Uncle_Chips", "Doritos", "Cornitos"]
+price = [20, 10, 10, 45, 45]
+mytable1.add_column(mun_col[0], sno1)
+mytable1.add_column(mun_col[1], name)
+mytable1.add_column(mun_col[2], price)
+print(mytable1)
+ask = int(input("Enter the no. of the item - "))
+li = []
+li.append(ask)
+while True:
+ask2 = input("Do you want to add more(y or n): - ")
+if ask2 == 'y':
+ask3 = int(input("Enter the no. of the item - "))
+li.append(ask3)
+elif ask2 == 'n':
+break
+sno3 = set(li)
+sno2 = list(sno3)
+name2 = []
+price2 = []
+for ele in sno2:
+name2.append(name[ele])
+price2.append(price[ele])
+check = {}
+for num in li:
+if num in check:
+check[num] += 1
+else:
+check[num] = 1
+amount = []
+for i in range(5):
+if i in check:
+amount.append(check[i])
+lasttable = PrettyTable()
+lastcol = ["S.No.", "Name", "Price", "Amount"]lasttable.add_column(lastcol[0], sno2)
+lasttable.add_column(lastcol[1], name2)
+lasttable.add_column(lastcol[2], price2)
+lasttable.add_column(lastcol[3], amount)
+bill = 0
+for i in li:
+bill = bill + price[i]
+return lasttable, bill
+elif n == 1:
+mytable2 = PrettyTable()
+mun_col = ["S.No.", "Name", "Price"]
+sno1 = [0, 1, 2, 3, 4]
+name = ["Verka_Milk", "Yakult", "Paneer", "Amul_Butter", "Amul_Cream"]
+price = [29, 85, 75, 45, 70]
+mytable2.add_column(mun_col[0], sno1)
+mytable2.add_column(mun_col[1], name)
+mytable2.add_column(mun_col[2], price)
+print(mytable2)
+ask = int(input("Enter the no. of the item - "))
+li = []
+li.append(ask)
