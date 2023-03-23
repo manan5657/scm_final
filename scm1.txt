@@ -76,4 +76,4 @@ mytable2.add_column(mun_col[2], price)
 print(mytable2)
 ask = int(input("Enter the no. of the item - "))
 li = []
-li.append(ask) //// Here is the text for reset and revert
+li.append(ask)
