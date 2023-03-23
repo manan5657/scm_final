@@ -1,0 +1,112 @@
+while True:
+ask2 = input("Do you want to add more(y or n): - ")
+if ask2 == 'y':
+ask3 = int(input("Enter the no. of the item - "))
+li.append(ask3)
+elif ask2 == 'n':
+break
+sno3 = set(li)
+sno2 = list(sno3)
+name2 = []
+price2 = []
+for ele in sno2:
+name2.append(name[ele])
+price2.append(price[ele])
+check = {}
+for num in li:
+if num in check:
+check[num] += 1
+else:
+check[num] = 1
+amount = []
+for i in range(5):
+if i in check:
+amount.append(check[i])
+lasttable = PrettyTable()
+lastcol = ["S.No.", "Name", "Price", "Amount"]
+lasttable.add_column(lastcol[0], sno2)
+lasttable.add_column(lastcol[1], name2)
+lasttable.add_column(lastcol[2], price2)
+lasttable.add_column(lastcol[3], amount)
+bill = 0
+for i in li:
+bill = bill + price[i]
+return lasttable, bill
+elif n == 1:
+mytable2 = PrettyTable()
+mun_col = ["S.No.", "Name", "Price"]
+sno1 = [0, 1, 2, 3, 4]
+name = ["Verka_Milk", "Yakult", "Paneer", "Amul_Butter", "Amul_Cream"]
+price = [29, 85, 75, 45, 70]
+mytable2.add_column(mun_col[0], sno1)
+mytable2.add_column(mun_col[1], name)
+mytable2.add_column(mun_col[2], price)
+print(mytable2)
+ask = int(input("Enter the no. of the item - "))
+li = []
+li.append(ask)
+while True:
+ask2 = input("Do you want to add more(y or n): - ")
+if ask2 == 'y':
+ask3 = int(input("Enter the no. of the item - "))
+li.append(ask3)
+elif ask2 == 'n':
+break
+sno3 = set(li)
+sno2 = list(sno3)
+name2 = []
+price2 = []
+for ele in sno2:
+name2.append(name[ele])
+price2.append(price[ele])
+check = {}
+for num in li:
+if num in check:
+check[num] += 1
+else:
+check[num] = 1
+amount = []
+for i in range(5):
+if i in check:
+amount.append(check[i])
+lasttable = PrettyTable()
+lastcol = ["S.No.", "Name", "Price", "Amount"]
+lasttable.add_column(lastcol[0], sno2)
+lasttable.add_column(lastcol[1], name2)
+lasttable.add_column(lastcol[2], price2)
+lasttable.add_column(lastcol[3], amount)
+bill = 0
+for i in li:
+bill = bill + price[i]
+return lasttable, bill
+elif n == 2:
+mytable3 = PrettyTable()
+mun_col = ["S.No.", "Name", "Price(750ml)"]
+sno1 = [0, 1, 2, 3, 4]
+name = ["Sprite", "Limca", "Paper_Boat", "Virgin_Mojito", "Pepsi"]
+price = [36, 36, 100, 80, 36]
+mytable3.add_column(mun_col[0], sno1)
+mytable3.add_column(mun_col[1], name)
+mytable3.add_column(mun_col[2], price)
+print(mytable3)
+ask = int(input("Enter the no. of the item - "))
+li = []
+li.append(ask)
+while True:
+ask2 = input("Do you want to add more(y or n): - ")
+if ask2 == 'y':
+ask3 = int(input("Enter the no. of the item - "))
+li.append(ask3)
+elif ask2 == 'n':
+break
+sno3 = set(li)
+sno2 = list(sno3)
+name2 = []
+price2 = []
+for ele in sno2:
+name2.append(name[ele])
+price2.append(price[ele])
+check = {}
+for num in li:
+if num in check:
+check[num] += 1
